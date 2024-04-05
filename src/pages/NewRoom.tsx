@@ -1,26 +1,16 @@
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import illustrationImg from '../assets/images/illustration.svg'
 import logo_lightImg from '../assets/images/logo_light.svg'
-import logoGoogle from '../assets/images/google-icon.svg'
 
 import '../styles/auth.scss'
 
 import { Button } from '../components/Button'
-import { useAuth } from '../hooks/useAuth'
+//import { useContext } from 'react'
+//import { AuthContext } from '../contexts/AuthContext'
 
-export function Home() {
-    const navigate = useNavigate();
-    const { user, signInWithGoogle} = useAuth();
-
-async function handleCreateRoom()  {
-    if (!user) {
-        await signInWithGoogle()
-    }
-
-    navigate('/rooms/new');
-
-    };
+export function NewRoom() {
+//    const {user, signInWithGoogle } = useContext(AuthContext)
 
     return (
         <div id="page-auth">
@@ -32,22 +22,19 @@ async function handleCreateRoom()  {
             <main>
                 <div className="main-content">
                     <img src={logo_lightImg} alt='Letmeask'/>
-                    <button onClick={handleCreateRoom} className="create-room">
-                        <img src={logoGoogle} alt='Logo Google'/>
-                        Crie sua sala com o Google
-                    </button> 
-                    <div className='separator'>
-                        ou entre em uma sala! 
-                    </div>
+                    <h2>Criar uma nova sala</h2>
                     <form>
                         <input 
                             type="text"
-                            placeholder="Digite o código da sala"
+                            placeholder="Nome da sala"
                         /> 
                         <Button type="submit">
-                            Entrar na sala
+                            Criar sala
                         </Button>
                     </form>
+                    <p>
+                        Quer entrar em uma sala existente?<Link to="/">clique aqui</Link>
+                    </p>
                 </div>
             </main>
         </div>
