@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {FormEvent, useState} from 'react'
 
 import illustrationImg from '../assets/images/illustration.svg'
@@ -9,10 +9,9 @@ import '../styles/auth.scss'
 import { Button } from '../components/Button'
 import { database } from '../services/firebase'
 import { useAuth } from '../hooks/useAuth'
-//import { useContext } from 'react'
-//import { AuthContext } from '../contexts/AuthContext'
 
 export function NewRoom() {
+const navigate = useNavigate();
 const {user} = useAuth();
 const [newRoom, setNewRoom] = useState('');
 
@@ -30,6 +29,7 @@ const [newRoom, setNewRoom] = useState('');
             authorId: user?.id
         })
 
+        navigate(`/rooms/${firebaseRoom.key}  `)
     }
 
         return (
