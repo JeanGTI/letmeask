@@ -38,7 +38,7 @@ async function HandleJoinRoom( event : FormEvent) {
         return;
     }
 
-    navigate(`room/${roomCode}`);
+    navigate(`rooms/${roomCode}`);
 
 }
 
