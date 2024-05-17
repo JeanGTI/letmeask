@@ -6,6 +6,8 @@ import { Home } from "./pages/Home";
 import { NewRoom } from "./pages/NewRoom";
 import { Room } from "./pages/Room";
 import { AdminRoom } from "./pages/AdminRoom";
+import { NewAdminRoom } from "./pages/NewAdminRoom";
+
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
           <Route path="/rooms/new" Component={NewRoom} />
           <Route path="/rooms/:id" Component={Room} />
           <Route path="/admin/rooms/:id" Component={AdminRoom} />
+          <Route path="/admin/rooms/new/:id" Component={NewAdminRoom} />
         </Routes>
       </AuthContextProvider>
     </BrowserRouter>

@@ -10,11 +10,7 @@ import deleteImg from '../assets/images/delete.svg'
 import checkImg from '../assets/images/check.svg'
 import answerImg from '../assets/images/answer.svg'
 
-
-
 import '../styles/room.scss'
-import '../hooks/useRoom'
-
 
 type RoomParams = {
     id: string;

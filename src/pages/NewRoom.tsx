@@ -29,7 +29,7 @@ const [newRoom, setNewRoom] = useState('');
             authorId: user?.id
         })
 
-        navigate(`/rooms/${firebaseRoom.key}  `)
+        navigate(`/admin/rooms/new/${firebaseRoom.key}  `)
     }
 
         return (
