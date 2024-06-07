@@ -1,3 +1,10 @@
+# O que é esse projeto?
+
+Projeto criado para fins de estudo de React
+Se trata de uma especie de forum onde alunos podem criar salas a fim de fazer perguntas para os professores, nas salas é possivel
+destacar uma pergunta e dar like.
+Possui visualização diferente de aluno para professor e também de quem criou a sala.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
